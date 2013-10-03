@@ -74,20 +74,17 @@
     [super draw];
     for (int i = 0; i < 4; i++)
     {
-        CCSprite *s1 = (CCSprite*)[self getChildByTag:i];
+        s1 = (CCSprite*)[self getChildByTag:i];
         if(i == 4) {
-            CCSprite *s2 = (CCSprite*)[self getChildByTag:0];
-            ccDrawColor4B(255, 255, 255, 255); //Color of the line RGBA
-            glLineWidth(5.0f); //Stroke width of the line
-            ccDrawLine(ccp(s1.position.x, s1.position.y), ccp(s2.position.x, s2.position.y));
+            s2 = (CCSprite*)[self getChildByTag:0];
         }
         else {
-            CCSprite *s2 = (CCSprite*)[self getChildByTag:i+1];
-            ccDrawColor4B(255, 255, 255, 255); //Color of the line RGBA
-            glLineWidth(5.0f); //Stroke width of the line
-            ccDrawLine(ccp(s1.position.x, s1.position.y), ccp(s2.position.x, s2.position.y));
+            s2 = (CCSprite*)[self getChildByTag:i+1];
         }
-            
+        ccDrawColor4B(255, 255, 255, 255); //Color of the line RGBA
+        glLineWidth(5.0f); //Stroke width of the line
+        ccDrawLine(ccp(s1.position.x, s1.position.y), ccp(s2.position.x, s2.position.y));
+
         
     }
     //CCSprite *s1 = (CCSprite*)[self getChildByTag:1];

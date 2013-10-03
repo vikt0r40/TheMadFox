@@ -13,6 +13,8 @@
 
 @interface playView : CCLayer {
     CCSpriteHelper *s;
+    CCSprite *s1;
+    CCSprite *s2;
 }
 +(CCScene *) scene;
 -(void)draw;
