@@ -139,8 +139,12 @@
 		9271700317FD6F6100BF8E4D /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 9271700217FD6F6100BF8E4D /* vec4.c */; };
 		9271700817FD6F6100BF8E4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271700717FD6F6100BF8E4D /* main.m */; };
 		9271700B17FD6F6100BF8E4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271700A17FD6F6100BF8E4D /* AppDelegate.m */; };
-		9271700E17FD6F6100BF8E4D /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271700D17FD6F6100BF8E4D /* HelloWorldLayer.m */; };
+		9271700E17FD6F6100BF8E4D /* mainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271700D17FD6F6100BF8E4D /* mainMenuView.m */; };
 		9271701117FD6F6100BF8E4D /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271701017FD6F6100BF8E4D /* IntroLayer.m */; };
+		9271701917FD730C00BF8E4D /* playView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271701817FD730C00BF8E4D /* playView.m */; };
+		9271701D17FD77D500BF8E4D /* optionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271701C17FD77D500BF8E4D /* optionsView.m */; };
+		9271701F17FD7B9B00BF8E4D /* Blue_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9271701E17FD7B9B00BF8E4D /* Blue_dot.png */; };
+		9271702217FD7C2100BF8E4D /* CCSpriteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9271702117FD7C2100BF8E4D /* CCSpriteHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -421,10 +425,17 @@
 		9271700717FD6F6100BF8E4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9271700917FD6F6100BF8E4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9271700A17FD6F6100BF8E4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9271700C17FD6F6100BF8E4D /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		9271700D17FD6F6100BF8E4D /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		9271700C17FD6F6100BF8E4D /* mainMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainMenuView.h; sourceTree = "<group>"; };
+		9271700D17FD6F6100BF8E4D /* mainMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainMenuView.m; sourceTree = "<group>"; };
 		9271700F17FD6F6100BF8E4D /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		9271701017FD6F6100BF8E4D /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		9271701717FD730B00BF8E4D /* playView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = playView.h; path = Views/playView.h; sourceTree = "<group>"; };
+		9271701817FD730C00BF8E4D /* playView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = playView.m; path = Views/playView.m; sourceTree = "<group>"; };
+		9271701B17FD77D500BF8E4D /* optionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = optionsView.h; sourceTree = "<group>"; };
+		9271701C17FD77D500BF8E4D /* optionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = optionsView.m; sourceTree = "<group>"; };
+		9271701E17FD7B9B00BF8E4D /* Blue_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_dot.png; sourceTree = "<group>"; };
+		9271702017FD7C2100BF8E4D /* CCSpriteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteHelper.h; sourceTree = "<group>"; };
+		9271702117FD7C2100BF8E4D /* CCSpriteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -451,6 +462,7 @@
 		92716E5817FD6F5C00BF8E4D = {
 			isa = PBXGroup;
 			children = (
+				9271701A17FD731500BF8E4D /* Views */,
 				92716E7817FD6F5D00BF8E4D /* madFox */,
 				92716E6317FD6F5D00BF8E4D /* Frameworks */,
 				92716E6217FD6F5D00BF8E4D /* Products */,
@@ -485,10 +497,10 @@
 		92716E7817FD6F5D00BF8E4D /* madFox */ = {
 			isa = PBXGroup;
 			children = (
+				9271702017FD7C2100BF8E4D /* CCSpriteHelper.h */,
+				9271702117FD7C2100BF8E4D /* CCSpriteHelper.m */,
 				9271700917FD6F6100BF8E4D /* AppDelegate.h */,
 				9271700A17FD6F6100BF8E4D /* AppDelegate.m */,
-				9271700C17FD6F6100BF8E4D /* HelloWorldLayer.h */,
-				9271700D17FD6F6100BF8E4D /* HelloWorldLayer.m */,
 				9271700F17FD6F6100BF8E4D /* IntroLayer.h */,
 				9271701017FD6F6100BF8E4D /* IntroLayer.m */,
 				92716E7917FD6F5D00BF8E4D /* Resources */,
@@ -502,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				92716E7A17FD6F5D00BF8E4D /* Default.png */,
+				9271701E17FD7B9B00BF8E4D /* Blue_dot.png */,
 				92716E7C17FD6F5D00BF8E4D /* Default@2x.png */,
 				92716E7E17FD6F5D00BF8E4D /* Default-568h@2x.png */,
 				92716E8017FD6F5D00BF8E4D /* Default-Landscape~ipad.png */,
@@ -879,6 +892,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9271701A17FD731500BF8E4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9271701717FD730B00BF8E4D /* playView.h */,
+				9271701817FD730C00BF8E4D /* playView.m */,
+				9271701B17FD77D500BF8E4D /* optionsView.h */,
+				9271701C17FD77D500BF8E4D /* optionsView.m */,
+				9271700C17FD6F6100BF8E4D /* mainMenuView.h */,
+				9271700D17FD6F6100BF8E4D /* mainMenuView.m */,
+			);
+			name = Views;
+			path = madFox;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -939,6 +966,7 @@
 				92716E8517FD6F5D00BF8E4D /* Icon-Small-50.png in Resources */,
 				92716E9017FD6F5D00BF8E4D /* iTunesArtwork in Resources */,
 				92716E8917FD6F5D00BF8E4D /* Icon-Small@2x.png in Resources */,
+				9271701F17FD7B9B00BF8E4D /* Blue_dot.png in Resources */,
 				92716E8117FD6F5D00BF8E4D /* Default-Landscape~ipad.png in Resources */,
 				92716E7F17FD6F5D00BF8E4D /* Default-568h@2x.png in Resources */,
 				92716E8D17FD6F5D00BF8E4D /* Icon@2x.png in Resources */,
@@ -961,6 +989,7 @@
 				92716ECF17FD6F5D00BF8E4D /* ccDeprecated.m in Sources */,
 				92716F8A17FD6F6000BF8E4D /* CCDirectorMac.m in Sources */,
 				92716EE417FD6F5E00BF8E4D /* ccGLStateCache.m in Sources */,
+				9271701D17FD77D500BF8E4D /* optionsView.m in Sources */,
 				92716FB617FD6F6000BF8E4D /* TransformUtils.m in Sources */,
 				92716F0317FD6F5E00BF8E4D /* CCNode+Debug.m in Sources */,
 				92716EDE17FD6F5E00BF8E4D /* ccFPSImages.m in Sources */,
@@ -982,6 +1011,7 @@
 				92716F0F17FD6F5E00BF8E4D /* CCParticleExamples.m in Sources */,
 				92716F0C17FD6F5E00BF8E4D /* CCParticleBatchNode.m in Sources */,
 				92716F4F17FD6F5F00BF8E4D /* CCTextureAtlas.m in Sources */,
+				9271701917FD730C00BF8E4D /* playView.m in Sources */,
 				92716FFD17FD6F6100BF8E4D /* utility.c in Sources */,
 				92716FA917FD6F6000BF8E4D /* CCVertex.m in Sources */,
 				92716FAF17FD6F6000BF8E4D /* NSThread+performBlock.m in Sources */,
@@ -1011,6 +1041,7 @@
 				92716F5217FD6F5F00BF8E4D /* CCTextureCache.m in Sources */,
 				92716FF517FD6F6100BF8E4D /* neon_matrix_impl.c in Sources */,
 				92716F2517FD6F5E00BF8E4D /* CCScene.m in Sources */,
+				9271702217FD7C2100BF8E4D /* CCSpriteHelper.m in Sources */,
 				92716EA417FD6F5D00BF8E4D /* CCActionGrid3D.m in Sources */,
 				92716FED17FD6F6000BF8E4D /* mat4stack.c in Sources */,
 				92716F4917FD6F5F00BF8E4D /* CCSpriteFrameCache.m in Sources */,
@@ -1045,7 +1076,7 @@
 				92716FEF17FD6F6100BF8E4D /* matrix.c in Sources */,
 				92716ED517FD6F5D00BF8E4D /* CCDrawingPrimitives.m in Sources */,
 				92716F3D17FD6F5F00BF8E4D /* ccShaders.m in Sources */,
-				9271700E17FD6F6100BF8E4D /* HelloWorldLayer.m in Sources */,
+				9271700E17FD6F6100BF8E4D /* mainMenuView.m in Sources */,
 				92716F9317FD6F6000BF8E4D /* CCWindow.m in Sources */,
 				92716F7117FD6F5F00BF8E4D /* cocos2d.m in Sources */,
 				92716F1E17FD6F5E00BF8E4D /* CCProgressTimer.m in Sources */,

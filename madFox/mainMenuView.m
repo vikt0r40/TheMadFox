@@ -8,15 +8,17 @@
 
 
 // Import the interfaces
-#import "HelloWorldLayer.h"
+#import "mainMenuView.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
+#import "playView.h"
+#import "optionsView.h"
 
-#pragma mark - HelloWorldLayer
+#pragma mark - mainMenuView
 
 // HelloWorldLayer implementation
-@implementation HelloWorldLayer
+@implementation mainMenuView
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
@@ -25,12 +27,13 @@
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	HelloWorldLayer *layer = [HelloWorldLayer node];
+	mainMenuView *layer = [mainMenuView node];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
 	
 	// return the scene
+    //sssssss
 	return scene;
 }
 
@@ -42,13 +45,13 @@
 	if( (self=[super init]) ) {
 		
 		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+		CCLabelTTF *label = [CCLabelTTF labelWithString:@"The Mad Fox" fontName:@"Marker Felt" fontSize:25];
 
 		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 	
 		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
+		label.position =  ccp( size.width /2 , size.height-25 );
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
@@ -63,41 +66,27 @@
 		[CCMenuItemFont setFontSize:28];
 		
 		// to avoid a retain-cycle with the menuitem and blocks
-		__block id copy_self = self;
+		//__block id copy_self = self;
 		
 		// Achievement Menu Item using blocks
-		CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
+		CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Play" block:^(id sender) {
 			
-			
-			GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
-			achivementViewController.achievementDelegate = copy_self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:achivementViewController animated:YES];
-			
-			[achivementViewController release];
+			[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[playView scene] ]];
+
 		}];
 		
 		// Leaderboard Menu Item using blocks
-		CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
+		CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Options" block:^(id sender) {
 			
-			
-			GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
-			leaderboardViewController.leaderboardDelegate = copy_self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:leaderboardViewController animated:YES];
-			
-			[leaderboardViewController release];
-		}];
+			//Options Scene
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[optionsView scene] ]];
+        }];
 
 		
 		CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, nil];
 		
-		[menu alignItemsHorizontallyWithPadding:20];
-		[menu setPosition:ccp( size.width/2, size.height/2 - 50)];
+		[menu alignItemsVerticallyWithPadding:20];
+		[menu setPosition:ccp( size.width/2, size.height/2)];
 		
 		// Add the menu to the layer
 		[self addChild:menu];
