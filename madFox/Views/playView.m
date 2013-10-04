@@ -36,6 +36,8 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
 		
+        numberOfPoints = 4;
+        
 		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Play Scene" fontName:@"Marker Felt" fontSize:24];
 		CGSize size = [[CCDirector sharedDirector] winSize];
 		label.position =  ccp( size.width /2 , size.height-25 );
@@ -52,7 +54,7 @@
         [self addChild:menu];
         //Hello
         //Set Random Spirtes on the screen
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < numberOfPoints; i++)
         {
             s = [CCSpriteHelper spriteWithFile:@"Blue_dot.png"];
             NSLog(@"Sprite Name %@",s);
@@ -72,7 +74,8 @@
 -(void)draw
 {
     [super draw];
-    for (int i = 0; i < 4; i++)
+    //Draw Lines
+    for (int i = 0; i < numberOfPoints; i++)
     {
         s1 = (CCSprite*)[self getChildByTag:i];
         if(i == 4) {
@@ -85,12 +88,6 @@
         glLineWidth(5.0f); //Stroke width of the line
         ccDrawLine(ccp(s1.position.x, s1.position.y), ccp(s2.position.x, s2.position.y));
 
-        
     }
-    //CCSprite *s1 = (CCSprite*)[self getChildByTag:1];
-    //CCSprite *s2 = (CCSprite*)[self getChildByTag:2];
-
-    
-
 }
 @end

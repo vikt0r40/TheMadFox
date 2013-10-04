@@ -15,6 +15,7 @@
     CCSpriteHelper *s;
     CCSprite *s1;
     CCSprite *s2;
+    int numberOfPoints;
 }
 +(CCScene *) scene;
 -(void)draw;
